@@ -1,6 +1,12 @@
 [
-    {
-        "title":"Test Title",
-        "text":"Test text"
-    }
+  {
+    "id": "09df9763-9ffe-45d7-bd02-2e7dc1a01067",
+    "title": "Hello",
+    "text": "This is my first note"
+  },
+  {
+    "id": "7ac5cc28-40e3-4470-af7d-661d943a85e8",
+    "title": "My precious",
+    "text": "Sneaky little hobbitses"
+  }
 ]
