@@ -5,6 +5,7 @@
 This app allows the user to add and delete custom notes using a local database to track and display the notes.
 
 The deployed app can be found at:
+
 >
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
@@ -43,7 +44,9 @@ This project is under the license of MIT.
 
 ## Contributions
 
-Starter code obtained from: <https://github.com/coding-boot-camp/miniature-eureka>
+Starter code obtained from:
+
+><https://github.com/coding-boot-camp/miniature-eureka>
 
 ## Questions
 
