@@ -25,7 +25,6 @@ app.get('/api/notes', (req, res) => {
 });
 
 app.post('/api/notes', (req, res) => {
-    // Get the saved notes in the database
     const noteData = getData();
 
     // Create an id for the new note and set its properties from the client request
@@ -41,6 +40,25 @@ app.post('/api/notes', (req, res) => {
 
     // Respond to the client so the promise resolves
     res.json({ message: 'Database Updated Successfully' });
+});
+
+app.delete('/api/notes/:noteID', (req, res) => {
+    const noteID = req.params.noteID;
+    const notes = getData();
+
+    // Go over the array and find the index of the object that has a matching id  
+    const noteIndex = notes.findIndex((note) => note.id === noteID);
+
+    // If an index is found then splice it from the array and overwrite the database with new array
+    if (noteIndex !== -1) {
+        notes.splice(noteIndex, 1);
+
+        writeData(notes);
+
+        res.json({ message: 'Database Updated Successfully' });
+    } else {
+        res.json({ error: 'Note Not Found' });
+    }
 });
 
 // Route to return index.html for all other routes
