@@ -42,8 +42,8 @@ app.post('/api/notes', (req, res) => {
     res.json({ message: 'Database Updated Successfully' });
 });
 
-app.delete('api/notes/:noteID', (req, res) => {
-    const noteID = req.params.note;
+app.delete('/api/notes/:noteID', (req, res) => {
+    const noteID = req.params.noteID;
     const notes = getData();
 
     // Go over the array and find the index of the object that has a matching id  
@@ -56,9 +56,9 @@ app.delete('api/notes/:noteID', (req, res) => {
         writeData(notes);
 
         res.json({ message: 'Database Updated Successfully' });
+    } else {
+        res.json({ error: 'Note Not Found' });
     }
-
-    res.json({ error: 'Note Not Found' });
 });
 
 // Route to return index.html for all other routes
