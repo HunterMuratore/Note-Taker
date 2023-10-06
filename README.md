@@ -6,7 +6,7 @@ This app allows the user to add and delete custom notes using a local database t
 
 The deployed app can be found at:
 
->
+><https://vast-crag-50066-eb5bafc4c88f.herokuapp.com/>
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
